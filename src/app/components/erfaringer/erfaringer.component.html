@@ -1,0 +1,83 @@
+<div class="container" id="home">
+<h1>Erfaringer</h1>
+
+
+<div class="courses-panel">
+  <mat-tab-group>
+    <mat-tab label="2. Semester"><div class="padding-top-60">
+<div class="padding-bottom-40">
+      <button class="filter-button" mat-button [matMenuTriggerFor]="menu"><mat-icon class="filter">filter_list</mat-icon></button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Svangreomsorg</button>
+        <button mat-menu-item>Anden svangreomsorg</button>
+        <button mat-menu-item>Fødselsomsorg</button>
+        <button mat-menu-item>Anden fødselsomsorg</button>
+      </mat-menu>
+    </div>
+      <div *ngFor="let experience of experiences | async">
+      
+       
+        <mat-accordion>
+           
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                   <b>{{ experience.title }}</b> 
+                </mat-panel-title>
+            
+              </mat-expansion-panel-header>
+             
+              <p> {{ experience.kategori }} </p>
+              <p> {{ experience.description }} </p>
+              
+              <mat-action-row>
+                
+                
+                <button style="width: 100%;" mat-raised-button  color="primary" (click)="openSnackbar()">Tilføj</button>
+                  
+                </mat-action-row>
+            </mat-expansion-panel>
+          </mat-accordion>
+        
+      
+      </div>
+      </div>
+      </mat-tab>
+    <mat-tab label="4. Semester"></mat-tab>
+    <mat-tab label="6. Semester"><div class="padding-top-60">
+ 
+      <div *ngFor="let experience of experiences | async">
+      
+       
+        <mat-accordion>
+           
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                   <b>{{ experience.title }}</b> 
+                </mat-panel-title>
+            
+              </mat-expansion-panel-header>
+             
+              <p> {{ experience.kategori }} </p>
+              <p> {{ experience.description }} </p>
+              
+              <mat-action-row>
+                  <button  style="width: 100%;" mat-raised-button  color="primary" (click)="openSnackbar()">Tilføj</button>
+                  
+                </mat-action-row>
+            </mat-expansion-panel>
+          </mat-accordion>
+        
+      
+      </div>
+      </div>
+      </mat-tab>
+   
+  </mat-tab-group>
+</div>
+
+
+</div>

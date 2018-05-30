@@ -1,0 +1,43 @@
+.Card-Aligner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  
+  .card-items button{
+    width: 250px;
+    margin-bottom: 10px;
+  }
+  
+  .input-full{
+    width: 95%;
+  }
+  
+  p {
+    text-align: left;
+  }
+
+   .filter {
+   
+    color: purple;
+  }
+
+.padding-bottom-40 {
+  padding-bottom: 40px;
+}
+
+  .filter-button {
+    top: -49px;
+    display: flex;
+    float: right;
+    flex-direction: row;
+    justify-content: flex-end;
+    min-width: 69px;
+    
+  }
+
+  .center-flex{
+    flex: 1 1 auto;
+  }
+  

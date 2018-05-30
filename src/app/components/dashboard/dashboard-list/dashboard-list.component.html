@@ -1,0 +1,14 @@
+
+    <mat-card *ngFor="let dashboard of dashboards | async">
+      <mat-card-content routerLink="{{dashboard.id}}">
+      
+        <h2>{{dashboard.title}}</h2>
+        <p>
+          <small>{{dashboard.published | date:"fullDate"}}</small>
+        </p>
+        <p> {{ dashboard.category }} </p>
+        <p> {{ dashboard.description }} </p>
+      </mat-card-content>
+     
+    </mat-card>
+ 

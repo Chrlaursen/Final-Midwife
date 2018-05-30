@@ -1,0 +1,13 @@
+.button-row button {
+    min-width: 280px;
+}
+
+.span-text {
+    float:left;
+}
+
+.material-icons {
+    float: right;
+    vertical-align: middle;
+    padding-top: 5px;
+}

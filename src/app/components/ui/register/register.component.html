@@ -1,0 +1,60 @@
+
+        
+  <form [formGroup]="userForm"  *ngIf="newUser"  (ngSubmit)="login()">
+     
+      <div class="Card-Aligner">
+          <mat-card class="card-items">
+      <h1>Login</h1>
+      <mat-form-field class="input-full">
+        <input matInput type="email" id="email" placeholder="Email" formControlName="email" required>
+          <mat-error *ngIf="formErrors.email">{{ formErrors.email }}</mat-error>
+        </mat-form-field>
+        <mat-form-field class="input-full">
+            <input matInput type="password" id="inputPassword" placeholder="Password" formControlName="password" required>
+            <mat-error *ngIf="formErrors.password">{{ formErrors.password }}</mat-error>
+          </mat-form-field>
+          <button type="submit" mat-raised-button  color="primary" (onclick)="!userForm.valid">Login</button><br>
+          <button mat-raised-button color="primary" (click)="signInWithGoogle()">Login med Google</button>
+          <hr>
+          <mat-card-actions>
+              <a (click)="toggleForm()">Ny bruger?</a>
+            </mat-card-actions>
+            
+          </mat-card>
+        </div>
+        <br>
+        <br>
+        
+        </form>
+    
+  
+  
+
+  <form [formGroup]="userForm"  *ngIf="!newUser"  (ngSubmit)="signup()">
+      
+<div class="Card-Aligner">
+    <mat-card class="card-items">
+      <h1>Registrer</h1>
+      <mat-form-field class="input-full">
+        <input matInput type="email" id="email" placeholder="Email" formControlName="email" required>
+          <mat-error *ngIf="formErrors.email">{{ formErrors.email }}</mat-error>
+        </mat-form-field>
+        <mat-form-field class="input-full">
+            <input matInput type="password" id="inputPassword" placeholder="Password" formControlName="password" required>
+            <mat-error *ngIf="formErrors.password">{{ formErrors.password }}</mat-error>
+          </mat-form-field>
+          
+          <button type="submit" mat-raised-button  color="primary" (onclick)="!userForm.valid">Registrer</button><br>
+          <button mat-raised-button color="primary" (click)="signInWithGoogle()">Login med Google</button>
+          <hr>
+          <mat-card-actions >
+              <a (click)="toggleForm()" >Allerede registreret?</a>
+            </mat-card-actions>
+            
+          </mat-card>
+        </div>
+        <br>
+        <br>
+        
+        </form>
+    

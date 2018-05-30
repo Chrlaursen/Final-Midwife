@@ -1,0 +1,16 @@
+<div class="padding-top-60">
+    <div *ngIf="!(auth.user | async); else alreadyLoggedIn">
+        <app-register></app-register>
+      
+        
+      
+          
+      
+      </div>
+      
+      <ng-template #alreadyLoggedIn>
+        <p class="text-success">
+          You are logged in <i class="fa fa-thumbs-up"></i>
+        </p>
+      </ng-template>
+      
